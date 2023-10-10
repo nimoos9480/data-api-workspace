@@ -66,7 +66,7 @@ public class Application {
 			 String careNm = result.getString("careNm");
 			 String careAddr = result.getString("careAddr");
 			 System.out.println("동물보호센터명 : " + careNm);
-			 System.out.println("주소 : " + careAddr);
+			 System.out.println("주소 : " + careAddr); 
 			 System.out.println();
 		 }
 	}
