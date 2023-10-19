@@ -24,7 +24,7 @@ public class APIController {
 	
 	// api 정보 보내는 부분
 	@ResponseBody
-	@RequestMapping(value="api.do", produces="application.json; charset=utf-8")  // api.do를 호출할 때 여기로 올 수 있게 함
+	@RequestMapping(value="api.do", produces="application/json; charset=utf-8")  // api.do를 호출할 때 여기로 올 수 있게 함
 	public String apiInfo(String stnId) throws IOException {
 		// URL 
 		String url = "https://apis.data.go.kr/1360000/MidFcstInfoService/getMidFcst";
