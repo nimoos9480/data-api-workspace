@@ -20,14 +20,11 @@ public class APIController {
 	
 	// 메소드 호출을 받는 부분이 있어야 함
 	
-	public static final String serviceKey = "UNmnLkcNtzgMKivBzvyb3TdrsqmthwquJWOHYpkKXK6aXtSdhG1gbTQ6EOqATL5t3ApCJ2hySkej4pCTXuaAZg%3D%3D";
+	public static final String serviceKey = "E2Yxi7LY8WT0So4ug5OHep%2FWznH5ws3FDEEVJAJnmib%2BfEXOT5EOZGeoHfr0CcFQNAb8jdXV%2FeuOW8DJXClF8g%3D%3D";
 	
-	// api 정보 보내는 부분
-	@ResponseBody
-	@RequestMapping(value="api.do", produces="application/json; charset=utf-8")  // api.do를 호출할 때 여기로 올 수 있게 함
 	public String apiInfo(String stnId) throws IOException {
 		// URL 
-		String url = "https://apis.data.go.kr/1360000/MidFcstInfoService/getMidFcst";
+		String url = "https://apis.data.go.kr/1611000/nsdi/map/AdresSpceService";
 		
 		// 시험 => 파라미터값 어떻게 전달하는지 파악하는 것이 중요 (사이트에서 요구하는대로 작성할 것)
 		url += "?serviceKey=" + serviceKey;
