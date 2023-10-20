@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
+
 import java.net.URL;
 import java.net.URLEncoder;
 
@@ -31,7 +31,7 @@ public class APIController {
 		
 		// 시험 => 파라미터값 어떻게 전달하는지 파악하는 것이 중요 (사이트에서 요구하는대로 작성할 것)
 		url += "?serviceKey=" + serviceKey;
-		url += "&tmFc=202310190600";
+		url += "&tmFc=202310200600";
 		url += "&dataType=JSON";
 		url += "&stnId=" + stnId; 	
 		// 파라미터값이 숫자일때는 그냥 가져오지만 만약에 파라미터값이 한글이면 utf-8 인코딩을 해줘야 함

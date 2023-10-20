@@ -43,8 +43,8 @@
 					data: {stnId: $("#stnId").val()},
 					success: function(data) {
 						<%--console.log(data);
-						console.log(data.response.body.items.item);
-						--%>
+						console.log(data.response.body.items.item);--%>
+						
 						
 						const result = data.response.body.items.item;
 						const dataList = result[0].wfSv.split("○ ");
