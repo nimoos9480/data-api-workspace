@@ -16,6 +16,27 @@ public class MemberDAO {
 		return DriverManager.getConnection(url, id, pw);
 	}
 	
+	public boolean isEmailExist(String email) throws Exception{
+
+		String sql = "select email from members where email=?";
+
+		Connection con = this.getConnection();
+
+		PreparedStatement pstat = con.prepareStatement(sql);
+
+		 {
+
+			pstat.setString(1, email);
+			ResultSet rs = pstat.executeQuery();
+			{
+				return rs.next();
+
+			}
+
+		}
+
+	}
+
 	public boolean login(String id, String pwd) throws Exception {
 		String sql = "select id from members where id=? and pwd=?";
 		
@@ -28,4 +49,7 @@ public class MemberDAO {
 		
 		return rs.next(); // 결과가 1개라도 있으면 true반환하니 바로 리턴받는다.
 	}
+	
+	
+	
 }
